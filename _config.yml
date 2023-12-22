@@ -12,5 +12,6 @@ include:
     - CONTRIBUTING.md
     - ISSUE_TEMPLATE.md
     - PULL_REQUEST_TEMPLATE.md
+    - __posts/*.md
 theme: jekyll-theme-tactile
 # theme: jekyll-theme-slate
