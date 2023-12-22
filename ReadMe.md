@@ -1,3 +1,5 @@
 # Simple things I've learned
 
-Content goes here.
+## Recent Posts
+
+[Welcome](./_posts/20231222_welcome.md)
