@@ -12,5 +12,5 @@ include:
     - CONTRIBUTING.md
     - ISSUE_TEMPLATE.md
     - PULL_REQUEST_TEMPLATE.md
-    - _posts/*.md
+    - 20231222_welcome.md
 theme: jekyll-theme-tactile
