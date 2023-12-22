@@ -1,4 +1,4 @@
-# Simple things I've learned
+# Patrick Robinson
 
 ## Recent Posts
 
