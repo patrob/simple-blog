@@ -1,3 +1,3 @@
-# Patrick Robinson's Simple Blog
+# Simple things I've learned
 
 Content goes here.
