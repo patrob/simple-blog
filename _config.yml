@@ -12,4 +12,5 @@ include:
     - ISSUE_TEMPLATE.md
     - PULL_REQUEST_TEMPLATE.md
     - _posts
+    - _layouts
 theme: jekyll-theme-tactile
