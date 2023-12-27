@@ -2,4 +2,4 @@
 
 ## Recent Posts
 
-[Welcome](/20231222_welcome.html)
+[Welcome](/posts/20231222_welcome.html)
