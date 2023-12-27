@@ -1,7 +1,4 @@
----
-title: Patrick Robinson
-layout: default
----
+# Patrick Robinson
 
 ### Recent Posts
 
