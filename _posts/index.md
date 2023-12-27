@@ -5,9 +5,9 @@ layout: default
 
 <ul>
     <li>
-        <a href="/20231222_welcome.html">Welcome</a>
+        <a href="/_posts/20231222_welcome.html">Welcome</a>
     </li>
     <li>
-        <a href="/NGRX_Overview.html">NGRX Overview</a>
+        <a href="/_posts/NGRX_Overview.html">NGRX Overview</a>
     </li>
 </ul>
