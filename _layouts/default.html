@@ -10,35 +10,41 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="/css/style.css" />
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/"> Patrick Robinson </a>
-                <div
-                    class="collapse navbar-collapse"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a
-                                class="nav-link active"
-                                aria-current="page"
-                                href="/"
-                                >Home</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/_posts/index.html"
-                                >Recent Posts</a
-                            >
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
     </head>
     <body>
-        <h1>{{ page.title }}</h1>
-        <section class="container-fluid">{{ content }}</section>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/"> Patrick Robinson </a>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="/"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/_posts/index.html"
+                                    >Recent Posts</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-shrink-0">
+            <div class="container">
+                <h1>{{ page.title }}</h1>
+                <section class="container-fluid">{{ content }}</section>
+            </div>
+        </main>
         <footer class="footer mt-auto py-3 bg-light">
             &copy;2023 Patrick Robinson
         </footer>
