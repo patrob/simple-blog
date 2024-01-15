@@ -25,6 +25,18 @@
         </header>
         <main class="flex-shrink-0 mt-5">
             <div class="container mt-3">
+                {% if page.collection == "posts" %}
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ page.title }}</h2>
+                        <p class="meta">{{ page.date | date_to_string }}</p>
+                        <div class="post">{{ page.content }}</div>
+                    </div>
+                </div>
+                {% elseif page.title == "About Me" %}
+                <h2>{{ page.title }}</h2>
+                <div class="post">{{ page.content }}</div>
+                {% else %}
                 <h2>Blog Posts</h2>
                 {% for post in site.posts limit: 10 %}
                 <div class="card w-100">
@@ -34,7 +46,7 @@
                         <div class="post">{{ post.content }}</div>
                     </div>
                 </div>
-                {% endfor %}
+                {% endfor %} {% endif %}
             </div>
             <div class="infinite-spinner"></div>
         </main>
