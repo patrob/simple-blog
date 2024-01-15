@@ -19,17 +19,32 @@
                 </div>
             </nav>
         </header>
-        <main class="flex-shrink-0">
-            <div class="container mt-5">
-                {% for post in site.posts limit: 10 %}
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h2 class="card-title">{{ post.title }}</h2>
-                        <p class="meta">{{ post.date | date_to_string }}</p>
-                        <div class="post">{{ post.content }}</div>
+        <main class="flex-shrink-0 mt-5">
+            <div class="container row">
+                <div class="col-9">
+                    {% for post in site.posts limit: 10 %}
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <p class="meta">{{ post.date | date_to_string }}</p>
+                            <div class="post">{{ post.content }}</div>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                <div class="col-3">
+                    <a
+                        class="twitter-timeline"
+                        data-theme="dark"
+                        href="https://twitter.com/probinsontx?ref_src=twsrc%5Etfw"
+                        >Tweets by probinsontx</a
+                    >
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
+                </div>
             </div>
             <div class="infinite-spinner"></div>
         </main>
@@ -44,6 +59,19 @@
                         href="mailto:me@patrickarobinson.com"
                         >Email me</a
                     >
+                </div>
+                <div>
+                    <a
+                        href="https://twitter.com/probinsontx?ref_src=twsrc%5Etfw"
+                        class="twitter-follow-button"
+                        data-show-count="false"
+                        >Follow @probinsontx</a
+                    >
+                    <script
+                        async
+                        src="https://platform.twitter.com/widgets.js"
+                        charset="utf-8"
+                    ></script>
                 </div>
             </div>
         </footer>
