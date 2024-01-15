@@ -2,7 +2,7 @@
 title: About Me
 ---
 
-<h3>Hello there! 👋</h3>
+<p>Hello there! 👋</p>
 
 <p>I'm a professional software consultant with over 10 years of experience in the industry. I have a passion for solving complex problems and creating innovative solutions. Throughout my career, I have had the opportunity to work with various clients and technologies, which has helped me develop a diverse skill set.</p>
 
