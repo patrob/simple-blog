@@ -16,39 +16,21 @@
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/"> Patrick Robinson </a>
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a
-                                    class="nav-link active"
-                                    aria-current="page"
-                                    href="/"
-                                    >Home</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/_posts/index.html"
-                                    >Recent Posts</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
         </header>
         <main class="flex-shrink-0">
             <div class="container">
-                {% for post in site.posts limit: 10 %}
-                <li>
-                    <h2>{{ post.title }}</h2>
-                    <p class="meta">{{ post.date | date_to_string }}</p>
+                <ul>
+                    {% for post in site.posts limit: 10 %}
+                    <li>
+                        <h2>{{ post.title }}</h2>
+                        <p class="meta">{{ post.date | date_to_string }}</p>
 
-                    <div class="post">{{ post.content }}</div>
-                </li>
-                {% endfor %}
+                        <div class="post">{{ post.content }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
             <div class="infinite-spinner"></div>
         </main>
@@ -56,7 +38,7 @@
             <div
                 class="align-content-center d-flex flex-row justify-content-around"
             >
-                <div>&copy;2023 Patrick Robinson</div>
+                <div class="pt-2">&copy;2023 Patrick Robinson</div>
                 <div>
                     <a
                         class="btn btn-dark"
