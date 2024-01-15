@@ -1,3 +1,7 @@
+---
+layout: none
+---
+
 # About Me
 
 Hello there! 👋
