@@ -1,8 +1,7 @@
 ---
-layout: none
+layout: about
+title: About Me
 ---
-
-# About Me
 
 Hello there! 👋
 
