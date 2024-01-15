@@ -13,5 +13,6 @@ include:
     - PULL_REQUEST_TEMPLATE.md
     - _posts
     - _layouts
-    - css
+    - _assets
+    - _drafts
 theme: jekyll-theme-tactile
