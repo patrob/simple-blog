@@ -50,14 +50,13 @@
                 {% assign recent_posts = site.posts | sort: 'date' | reverse %}
                 {% for post in recent_posts limit: 10 %}
                 <div class="card w-100">
+                    <div class="card-header">
+                        <a href="{{post.url}}">{{ post.title }} </a>
                     <div class="card-body">
-                        <h2 class="card-title">
-                            <a href="{{post.url}}"
-                                >{{ post.title }} {{ post.date | date:
-                                "%m-%d-%Y" }}</a
-                            >
-                        </h2>
                         <div class="post">{{ post.excerpt }}</div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        {{ post.date | date: "%m-%d-%Y" }}
                     </div>
                 </div>
                 {% endfor %} {% endif %}
