@@ -39,11 +39,9 @@
         <main class="flex-shrink-0 mt-5">
             <div class="container mt-3">
                 {% if page.collection == "posts" %}
-                <div class="container-fluid">
-                    <h2>{{ page.title }}</h2>
-                    <p class="meta">{{ page.date | date: "%m-%d-%Y" }}</p>
-                    <div class="post">{{ page.content }}</div>
-                </div>
+                <h2>{{ page.title }}</h2>
+                <p class="meta">{{ page.date | date: "%m-%d-%Y" }}</p>
+                <div class="post">{{ page.content }}</div>
                 {% elsif page.title == "About Me" %}
                 <h2>{{ page.title }}</h2>
                 <div class="post">{{ page.content }}</div>
