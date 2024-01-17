@@ -40,8 +40,10 @@
             <div class="container mt-3">
                 {% if page.collection == "posts" %}
                 <h2>{{ page.title }}</h2>
-                <p class="meta">{{ page.date | date: "%m-%d-%Y" }}</p>
                 <div class="post">{{ page.content }}</div>
+                <div class="text-muted">
+                    Posted on {{ page.date | date: "%m-%d-%Y" }}
+                </div>
                 {% elsif page.title == "About Me" %}
                 <h2>{{ page.title }}</h2>
                 <div class="post">{{ page.content }}</div>
