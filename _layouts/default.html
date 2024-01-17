@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         {% if page.title %}
-        <title>{{ page.title }}</title>
+        <title>Patrick A Robinson - {{ page.title }}</title>
         {% else %}
         <title>Patrick A Robinson</title>
         {% endif %}
@@ -31,6 +31,7 @@
                                     >About Me</a
                                 >
                             </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -38,12 +39,10 @@
         <main class="flex-shrink-0 mt-5">
             <div class="container mt-3">
                 {% if page.collection == "posts" %}
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h2 class="card-title">{{ page.title }}</h2>
-                        <p class="meta">{{ page.date | date: "%m-%d-%Y" }}</p>
-                        <div class="post">{{ page.content }}</div>
-                    </div>
+                <div class="container-fluid">
+                    <h2>{{ page.title }}</h2>
+                    <p class="meta">{{ page.date | date: "%m-%d-%Y" }}</p>
+                    <div class="post">{{ page.content }}</div>
                 </div>
                 {% elsif page.title == "About Me" %}
                 <h2>{{ page.title }}</h2>
@@ -54,7 +53,12 @@
                 {% for post in recent_posts limit: 10 %}
                 <div class="card w-100">
                     <div class="card-body">
-                        <h2 class="card-title"><a href="{{post.url}}">{{ post.title }} {{ post.date | date: "%m-%d-%Y" }}</a></h2>
+                        <h2 class="card-title">
+                            <a href="{{post.url}}"
+                                >{{ post.title }} {{ post.date | date:
+                                "%m-%d-%Y" }}</a
+                            >
+                        </h2>
                         <div class="post">{{ post.excerpt }}</div>
                     </div>
                 </div>
@@ -66,7 +70,9 @@
             <div
                 class="align-content-center d-flex flex-row justify-content-around"
             >
-                <div class="pt-2">&copy;{{"now" | date: "%Y"}} Patrick Robinson</div>
+                <div class="pt-2">
+                    &copy;{{"now" | date: "%Y"}} Patrick Robinson
+                </div>
 
                 <div class="d-flex flex-row justify-content-around">
                     <div>
@@ -85,7 +91,9 @@
                         ></a>
                     </div>
                     <div>
-                        <a class="btn" href="https://www.youtube.com/@patrickarobinson"
+                        <a
+                            class="btn"
+                            href="https://www.youtube.com/@patrickarobinson"
                             ><i class="bi bi-youtube"></i
                         ></a>
                     </div>
