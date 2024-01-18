@@ -48,21 +48,32 @@
                 <h2>{{ page.title }}</h2>
                 <div class="post">{{ page.content }}</div>
                 {% else %}
-                <h2>Recent Posts</h2>
-                {% assign recent_posts = site.posts | sort: 'date' | reverse %}
-                {% for post in recent_posts limit: 10 %}
-                <div class="card w-100">
-                    <div class="card-header">
-                        <a href="{{post.url}}">{{ post.title }} </a>
+                <div class="d-flex flex-row justify-content-around">
+                    <div class="flex-column">
+                        {% assign recent_posts = site.posts | sort: 'date' |
+                        reverse %} {% for post in recent_posts limit: 10 %}
+                        <div class="card w-100">
+                            <div class="card-header">
+                                <a href="{{post.url}}">{{ post.title }} </a>
+                            </div>
+                            <div class="card-body">
+                                <div class="post">{{ post.excerpt }}</div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                {{ post.date | date: "%m-%d-%Y" }}
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
-                    <div class="card-body">
-                        <div class="post">{{ post.excerpt }}</div>
-                    </div>
-                    <div class="card-footer text-muted">
-                        {{ post.date | date: "%m-%d-%Y" }}
+                    <div class="flex-column">
+                        <h2>Recent Posts</h2>
+                        {% assign recent_posts = site.posts | sort: 'date' |
+                        reverse %} {% for post in recent_posts limit: 5 %}
+                        <a href="{{post.url}}">{{ post.title }}</a>
+                        {% endfor %}
                     </div>
                 </div>
-                {% endfor %} {% endif %}
+                {% endif %}
             </div>
             <div class="infinite-spinner"></div>
         </main>
