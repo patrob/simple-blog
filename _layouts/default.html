@@ -66,11 +66,16 @@
                         {% endfor %}
                     </div>
                     <div class="flex-column">
-                        <h2>Recent Posts</h2>
-                        {% assign recent_posts = site.posts | sort: 'date' |
-                        reverse %} {% for post in recent_posts limit: 5 %}
-                        <a href="{{post.url}}">{{ post.title }}</a>
-                        {% endfor %}
+                        <div class="card">
+                            <div class="card-header">Recent Posts</div>
+                            <div class="card-body">
+                                {% assign recent_posts = site.posts | sort:
+                                'date' | reverse %} {% for post in recent_posts
+                                limit: 5 %}
+                                <a href="{{post.url}}">{{ post.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 {% endif %}
